@@ -48,7 +48,8 @@ const ResultGrid = () => {
           type: "GIF",
           title: item.title || "GIF",
           thumbnail: item.images.downsized.url,
-          src: item.images.downsized.url,
+
+          src:item.images.downsized.url,
         }));
       }
 
