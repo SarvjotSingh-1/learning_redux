@@ -1,9 +1,12 @@
 // import { fetchPhotos } from "./api/mediaApi";
 // import { fetchVedios } from "./api/mediaApi";
 // import { fetchGifs } from "./api/mediaApi";
-import SearchBar from "./components/SearchBar";
-import Tabs from "./components/Tabs";
-import ResultGrid from "./components/ResultGrid";
+
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/HomePage";
+import CollectionPage from "./pages/CollectionPage";
+import Navbar from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   // const getPhotos = async () => {
@@ -33,10 +36,12 @@ const App = () => {
       <button className="bg-cyan-700 m-5 px-4 py-3" onClick={getGifs}>
         Get GIf
       </button> */}
-
-      <SearchBar />
-      <Tabs />
-      <ResultGrid />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/collection" element={<CollectionPage />} />
+      </Routes>
+      <ToastContainer />
     </div>
   );
 };

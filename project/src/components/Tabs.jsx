@@ -1,7 +1,5 @@
-
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveTabs } from "../features/searchSlice";
-
+import { setActiveTab } from "../features/searchSlice";
 
 const Tabs = () => {
   const tabs = ["photos", "videos", "GIF"];
@@ -9,11 +7,11 @@ const Tabs = () => {
   const activeTab = useSelector((state) => state.search.activeTab);
 
   return (
-    <div className="flex gap-10 p-10">
+    <div className="flex gap-10 p-10 bg-black">
       {tabs.map((elem, idx) => (
         <button
           key={idx}
-          onClick={() => dispatch(setActiveTabs(elem))}
+          onClick={() => dispatch(setActiveTab(elem))}
           className={`px-5 py-2 rounded-md uppercase text-sm font-semibold
             transition-all duration-200 active:scale-95
             ${

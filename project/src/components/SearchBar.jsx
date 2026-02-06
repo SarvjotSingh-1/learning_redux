@@ -21,7 +21,7 @@ const SearchBar = () => {
           submitHandeler(e);
         }}
         action=""
-        className="flex p-7 bg-gray-950"
+        className="flex p-7 bg-(--c1)"
       >
         <input
           value={text}
@@ -31,12 +31,12 @@ const SearchBar = () => {
           }}
           type="text"
           required
-          className="border-2 py-2 w-full px-2 rounded-2xl outline-none gap-3 text-lg cursor-pointer "
+          className="border-2 py-2 w-full px-2 rounded-2xl outline-none gap-3 text-lg cursor-pointer text-white "
           name=""
           id=""
           placeholder="Search Anything "
         />
-        <button className="border-2 py-2 px-2 rounded-2xl outline-none  text-lg active:scale-95">
+        <button className="border-2 py-2 px-2 rounded-2xl outline-none  text-lg active:scale-95 text-white">
           Search
         </button>
       </form>
